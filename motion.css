@@ -105,6 +105,42 @@
 .case-shell { min-height: 100vh; overflow: clip; }
 .case-nav { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 24px 32px; mix-blend-mode: difference; color: white; }
 .case-back { border-bottom: 1px solid currentColor; padding-bottom: 3px; font-size: 13px; }
+.text-link-with-icon { display: inline-flex; align-items: center; gap: .48em; }
+
+/* Draw arrows instead of using Unicode glyphs: mobile Safari otherwise renders
+   some of them as colored emoji. */
+.ui-arrow {
+  position: relative;
+  display: inline-block;
+  width: .78em;
+  height: .78em;
+  flex: 0 0 auto;
+  transform: rotate(-45deg);
+  transition: transform .5s cubic-bezier(.2,.75,.2,1);
+}
+
+.ui-arrow::before {
+  content: "";
+  position: absolute;
+  left: .04em;
+  top: calc(50% - .5px);
+  width: .68em;
+  height: 1px;
+  background: currentColor;
+}
+
+.ui-arrow::after {
+  content: "";
+  position: absolute;
+  right: .04em;
+  top: .08em;
+  width: .42em;
+  height: .42em;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.ui-arrow--down { transform: rotate(90deg); }
 .case-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 12vh 4vw 6vh; position: relative; }
 .case-kicker { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.48); }
 .case-title { margin: 20px 0 0; font: 400 clamp(6rem, 21vw, 20rem)/.72 "DM Sans", sans-serif; letter-spacing: -.09em; text-transform: uppercase; }
@@ -218,7 +254,7 @@ header nav a:focus-visible,
 .header-cta:focus-visible .cta-arrow,
 .hero-primary:hover .cta-arrow,
 .hero-primary:focus-visible .cta-arrow {
-  transform: translate(4px,-4px) rotate(8deg);
+  transform: translate(4px,-4px) rotate(-37deg);
 }
 
 .hero-primary {
@@ -259,7 +295,7 @@ header nav a:focus-visible,
 }
 
 .hero-secondary:hover .secondary-arrow,
-.hero-secondary:focus-visible .secondary-arrow { transform: translateY(4px); }
+.hero-secondary:focus-visible .secondary-arrow { transform: translateY(4px) rotate(90deg); }
 
 .hero-cv {
   transition: background-color .35s ease, color .35s ease, transform .45s cubic-bezier(.2,.75,.2,1), box-shadow .35s ease;
@@ -274,7 +310,7 @@ header nav a:focus-visible,
 }
 
 .hero-cv:hover .download-arrow,
-.hero-cv:focus-visible .download-arrow { transform: translateY(4px); }
+.hero-cv:focus-visible .download-arrow { transform: translateY(4px) rotate(90deg); }
 
 .site-header > *,
 .hero-actions {
@@ -357,6 +393,28 @@ body .project-frame:focus-visible img {
   filter: brightness(.88) saturate(1.04);
 }
 
+.project-frame-label {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .02em;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .35s ease, transform .45s cubic-bezier(.2,.75,.2,1);
+}
+
+body .project-frame:hover .project-frame-label,
+body .project-frame:focus-visible .project-frame-label {
+  opacity: 1;
+  transform: none;
+}
+
 .project-scene:has(.project-frame:hover) .project-title-link,
 .project-scene:has(.project-frame:focus-visible) .project-title-link {
   letter-spacing: .025em;
@@ -396,6 +454,7 @@ body .project-frame:focus-visible img {
 @media (max-width: 760px) {
   .cursor-dot { display: none; }
   .case-nav { padding: 20px; }
+  .case-nav > a { display: inline-flex; align-items: center; gap: .42em; }
   .case-hero { min-height: 88vh; padding: 100px 20px 40px; }
   .case-title { font-size: clamp(4.5rem, 25vw, 8rem); }
   .case-summary { grid-template-columns: 1fr; gap: 2rem; }
@@ -406,6 +465,15 @@ body .project-frame:focus-visible img {
   .case-visual--strix { background-position-y: 100%; }
   .case-copy { grid-template-columns: 1fr; padding: 80px 20px; }
   .case-next { min-height: 38vh; padding: 40px 20px; }
+  .site-header { height: 70px; padding-inline: 20px; }
+  .header-cta { padding: .62rem .95rem; font-size: .78rem; }
+  .hero-actions { column-gap: 1rem; }
+  .ui-arrow { width: .72em; height: .72em; }
+}
+
+@media (hover: none) {
+  .project-frame-label { opacity: 1; transform: none; }
+  body .project-frame::after { opacity: .5; }
 }
 
 @media (prefers-reduced-motion: reduce) {
