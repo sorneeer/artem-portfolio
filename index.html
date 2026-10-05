@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artiom Djur — full-stack developer and business designer on Upwork in Chișinău, Moldova." />
+  <title>Artiom Djur — Design & Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="motion.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Cpath d='M17 44 29 17h6l12 27h-7l-2.5-6H26L23.5 44Zm11-12h7l-3.5-9Z' fill='%23f5f3ed'/%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{paper:'#f5f3ed',ink:'#080808',line:'#d2cec4'},fontFamily:{sans:['DM Sans','sans-serif'],display:['Instrument Serif','serif']}}}}</script>
+  <style>
+    *{box-sizing:border-box}html,body{height:100%;overflow:hidden}body{margin:0;background:#080808}body[data-no-intro] .page-intro{display:none!important}.stage{height:100svh;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}.scene{position:relative;min-height:100svh;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden}.hero-photo{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 25%);mask-image:linear-gradient(to right,transparent 0,#000 25%)}.scene-index{font:400 clamp(7rem,18vw,17rem)/.8 'Instrument Serif',serif;color:rgba(0,0,0,.055);letter-spacing:-.06em}.section-dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.28;transition:transform .3s ease,opacity .3s ease}.section-dot.is-active{opacity:1;transform:scale(1.8)}.scene-progress{position:fixed;right:24px;top:50%;z-index:60;display:flex;transform:translateY(-50%);flex-direction:column;gap:17px;color:white;mix-blend-mode:difference}.section-count{position:fixed;left:30px;bottom:24px;z-index:60;font-size:11px;letter-spacing:.16em;color:white;mix-blend-mode:difference}.project-scene{display:flex;align-items:center;background:#050505;color:#eee}.project-stage{width:min(66vw,1060px);margin-inline:auto;padding:94px 0 38px}.project-frame{position:relative;display:block;height:min(53vh,570px);min-height:320px;overflow:hidden;background:#171717}.project-frame img{width:100%;height:100%;object-fit:cover;transition:transform .85s cubic-bezier(.2,.75,.2,1),filter .5s ease}.project-frame--focus{background:#0a0a0a}.project-frame--focus img{object-position:center}.project-frame::before{content:'View project  ↗';position:absolute;right:22px;bottom:18px;z-index:3;color:#fff;font-size:12px;letter-spacing:.02em;opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.75,.2,1)}.project-frame::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(0,0,0,.42),transparent 38%);opacity:0;transition:opacity .45s ease}.project-frame:hover img{transform:scale(1.025);filter:brightness(.86)}.project-frame:hover::before,.project-frame:hover::after,.project-frame:focus-visible::before,.project-frame:focus-visible::after{opacity:1}.project-frame:hover::before,.project-frame:focus-visible::before{transform:none}.project-frame:focus-visible{outline:1px solid #fff;outline-offset:5px}.project-category{display:flex;align-items:center;justify-content:center;margin-top:15px;color:rgba(255,255,255,.45);font-size:13px}.project-category span{border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px}.project-info{max-width:530px;margin-top:34px}.project-info h2{font-size:clamp(2rem,3vw,3.25rem);font-weight:400;line-height:1}.project-title-link{display:inline-block;color:inherit;letter-spacing:-.04em;text-decoration:none;transition:letter-spacing .48s cubic-bezier(.2,.75,.2,1),opacity .3s ease}.project-title-link:hover,.project-title-link:focus-visible{letter-spacing:.055em;opacity:.7}.project-title-link:focus-visible{outline:1px solid currentColor;outline-offset:7px}.project-info p{max-width:510px;margin-top:12px;color:rgba(255,255,255,.58);font-size:15px;line-height:1.45}
+    .project-frame--movly img{object-position:center 36%}
+    @media(max-width:767px){.scene{min-height:100svh;overflow-y:auto}.hero-photo{-webkit-mask-image:none;mask-image:none}.scene-progress{right:11px}.section-count{left:20px;bottom:14px}.project-stage{width:calc(100vw - 44px);padding:92px 0 58px}.project-frame{height:43vh;min-height:270px}.project-category{font-size:11px}.project-info{margin-top:28px;padding-right:24px}.project-info p{font-size:13px}}
+    @media(max-height:760px) and (min-width:768px){.project-stage{padding-top:84px}.project-frame{height:46vh;min-height:270px}.project-info{margin-top:22px}.project-info p{margin-top:8px}}
+    @media(prefers-reduced-motion:reduce){.stage{scroll-behavior:auto}}
+  </style>
+</head>
+<body class="font-sans text-ink" data-page="PORTFOLIO" data-no-intro>
+  <header class="site-header fixed inset-x-0 top-0 z-50 flex h-20 items-center justify-between px-6 text-white mix-blend-difference sm:px-10 lg:px-16">
+    <a href="#home" class="site-brand text-sm font-semibold tracking-[-.02em]">ARTIOM DJUR</a>
+    <nav class="hidden gap-8 text-sm md:flex" aria-label="Main navigation"><a class="nav-link" data-label="Home" href="#home">Home</a><a class="nav-link" data-label="About" href="#about">About</a><a class="nav-link" data-label="Experience" href="#experience">Experience</a><a class="nav-link" data-label="Skills" href="#skills">Skills</a><a class="nav-link" data-label="Work" href="#flq">Work</a><a class="nav-link" data-label="Contact" href="#contact">Contact</a></nav>
+    <a href="mailto:djurartiom@icloud.com" class="header-cta rounded-full border border-current px-5 py-2.5 text-sm"><span>Let’s talk</span><span class="cta-arrow" aria-hidden="true">↗</span></a>
+  </header>
+
+  <aside class="scene-progress" aria-label="Section navigation">
+    <a class="section-dot is-active" href="#home" aria-label="Home"></a><a class="section-dot" href="#about" aria-label="About"></a><a class="section-dot" href="#experience" aria-label="Experience"></a><a class="section-dot" href="#skills" aria-label="Skills"></a><a class="section-dot" href="#flq" aria-label="FLQ"></a><a class="section-dot" href="#movly" aria-label="MOVLY"></a><a class="section-dot" href="#contact" aria-label="Contact"></a>
+  </aside>
+  <p class="section-count"><span id="currentSection">01</span> / 07</p>
+
+  <main id="stage" class="stage">
+    <section id="home" class="scene bg-paper">
+      <div class="absolute bottom-0 right-0 h-[42%] w-full md:inset-y-0 md:h-auto md:w-[62%]"><img class="hero-photo h-full w-full object-cover object-[50%_54%]" src="assets/artem-portrait.png" alt="Artiom Djur overlooking Chișinău at sunset" /><div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div></div>
+      <div class="relative z-10 flex min-h-[58svh] max-w-[700px] flex-col justify-start px-6 pb-6 pt-28 sm:px-10 md:min-h-[100svh] md:justify-center md:pb-16 md:pt-24 lg:px-20">
+        <p class="mb-4 text-[10px] uppercase leading-relaxed tracking-[.22em] text-black/50 md:mb-7 md:text-[11px]">Full-stack developer<br />Business designer on Upwork</p>
+        <h1 class="font-display text-[3.3rem] leading-[.86] tracking-[-.045em] sm:text-[4.5rem] md:text-[clamp(3.6rem,6.4vw,6.8rem)]">Building<br />digital products<br />that <em>people use.</em></h1>
+        <p class="mt-4 max-w-[470px] text-sm leading-[1.42] text-black/60 md:mt-7 md:text-base md:leading-[1.48]">I’m Artiom Djur, a full-stack developer and product designer based in Chișinău. I take digital products from first idea to working interface and code.</p>
+        <div class="hero-actions mt-5 flex flex-wrap items-center gap-x-6 gap-y-3 md:mt-7"><a href="#flq" class="hero-primary rounded-full bg-ink px-6 py-3 text-sm text-white md:px-7 md:py-3.5"><span>See my work</span><span class="cta-arrow" aria-hidden="true">↗</span></a><a href="#about" class="hero-secondary border-b border-black pb-1 text-sm"><span>About me</span><span class="secondary-arrow" aria-hidden="true">↓</span></a><a href="assets/Artiom_Djur_CV.pdf" download class="hero-cv rounded-full border border-ink px-5 py-3 text-sm"><span>Download CV</span><span class="download-arrow" aria-hidden="true">↓</span></a></div>
+      </div>
+      <p class="absolute bottom-10 right-10 z-10 hidden text-right text-white md:block"><span class="text-[10px] uppercase tracking-[.16em]">Chișinău, Moldova ●</span></p>
+    </section>
+
+    <section id="about" class="scene flex bg-ink text-white">
+      <span class="scene-index absolute -right-4 top-28 !text-white/[.045]">02</span>
+      <div class="grid min-h-[100svh] w-full items-center gap-10 px-6 py-28 sm:px-10 lg:grid-cols-[.62fr_.38fr] lg:px-20">
+        <div data-reveal><p class="text-[11px] uppercase tracking-[.2em] text-white/40">What I do</p><h2 class="mt-6 font-sans text-[clamp(4.8rem,11vw,11rem)] font-normal leading-[.71] tracking-[-.075em]">DESIGN<br />DEVELOP<br />BUILD</h2></div>
+        <div class="lg:self-end lg:pb-16" data-reveal><p class="text-xl leading-[1.45] text-white/60">I combine business thinking, visual identity and full-stack development. Every layer is designed as one system — from first concept to frontend, backend and database.</p><div class="mt-10 grid grid-cols-2 gap-x-5 gap-y-7 border-t border-white/20 pt-7 text-sm"><p>Product direction</p><p>UI/UX design</p><p>Brand identity</p><p>Full-stack build</p></div></div>
+      </div>
+    </section>
+
+    <section id="experience" class="scene bg-ink text-white">
+      <span class="scene-index absolute -right-4 top-28 !text-white/[.045]">03</span>
+      <div class="flex min-h-[100svh] flex-col justify-between px-6 pb-12 pt-28 sm:px-10 lg:px-20">
+        <div data-reveal><p class="text-[11px] uppercase tracking-[.2em] text-white/40">Experience &amp; recognition</p><h2 class="mt-4 max-w-[920px] font-display text-[clamp(4.2rem,8vw,8rem)] leading-[.84] tracking-[-.045em]">Work that became real experience.</h2></div>
+        <div class="grid gap-px bg-white/15 lg:grid-cols-2" data-reveal>
+          <article class="bg-ink px-6 py-7 lg:px-8 lg:py-9"><div class="flex items-center justify-between text-[11px] uppercase tracking-[.16em] text-white/40"><p>Upwork</p><p>Freelance</p></div><h3 class="mt-6 text-2xl font-normal tracking-[-.03em]">Business Designer</h3><p class="mt-4 max-w-[560px] text-sm leading-6 text-white/55">Business design, product direction, visual identity and web product development for freelance clients.</p></article>
+          <article class="bg-ink px-6 py-7 lg:px-8 lg:py-9"><div class="flex items-center justify-between text-[11px] uppercase tracking-[.16em] text-white/40"><p>Tekwill Junior Ambassadors</p><p>2024</p></div><h3 class="mt-6 text-2xl font-normal tracking-[-.03em]">3rd place in Artificial Intelligence</h3><p class="mt-4 max-w-[620px] text-sm leading-6 text-white/55">Together with another participant, I built and trained a model that recognized sign language and translated gestures into written text, helping deaf and non-speaking users communicate.</p></article>
+        </div>
+        <div class="grid gap-5 border-t border-white/15 pt-6 text-sm sm:grid-cols-2 lg:grid-cols-4" data-reveal><div><p class="text-white/35">Education</p><p class="mt-2">Cybersecurity · 1st year</p><p class="mt-1 text-white/45">UTM · Chișinău · 2026—Present</p></div><div><p class="text-white/35">Russian</p><p class="mt-2">Native</p></div><div><p class="text-white/35">English</p><p class="mt-2">Good comprehension · basic speaking</p></div><div><p class="text-white/35">Romanian</p><p class="mt-2">Good comprehension · basic speaking</p></div></div>
+      </div>
+    </section>
+
+    <section id="skills" class="scene bg-paper">
+      <span class="scene-index absolute -right-2 top-28">04</span>
+      <div class="flex min-h-[100svh] flex-col justify-between px-6 pb-14 pt-28 sm:px-10 lg:px-20">
+        <div data-reveal><p class="text-[11px] uppercase tracking-[.2em] text-black/45">Technical stack</p><h2 class="mt-4 max-w-[950px] font-display text-[clamp(4.2rem,8vw,8rem)] leading-[.82] tracking-[-.045em]">From interface to infrastructure.</h2><p class="mt-6 max-w-[760px] text-sm leading-6 text-black/50">Product direction · UI/UX · brand identity · responsive design · full-stack development</p></div>
+        <div class="grid gap-px bg-line lg:grid-cols-3" data-reveal>
+          <div class="bg-paper px-6 py-7"><p class="text-sm font-medium">Frontend</p><p class="mt-5 text-sm leading-7 text-black/50">React 19 · JavaScript / JSX · Vite 7 · React Router 7 · Axios · Tailwind CSS 4 · CSS Modules · responsive layouts · React Toastify · HTML5</p></div>
+          <div class="bg-paper px-6 py-7"><p class="text-sm font-medium">Backend</p><p class="mt-5 text-sm leading-7 text-black/50">Node.js 22 · Express.js 5 · REST API · MySQL / MySQL2 · JWT · bcrypt · Multer · CORS · dotenv · custom rate limiting</p></div>
+          <div class="bg-paper px-6 py-7"><p class="text-sm font-medium">Infrastructure</p><p class="mt-5 text-sm leading-7 text-black/50">Git · GitHub · Vercel · Serverless Functions · npm · ESLint · SPA routing with vercel.json</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flq" class="scene project-scene">
+      <div class="project-stage">
+        <a class="project-frame" href="flq.html" aria-label="Open the FLQ case study" data-reveal><img src="assets/flq-mockup.png" alt="FLQ digital studio website shown on a laptop" /></a>
+        <p class="project-category" data-reveal><span>Strategy. Design. Development</span></p>
+        <div class="project-info" data-reveal><h2><a class="project-title-link" href="flq.html">FLQ</a></h2><p>My self-built business startup helping Moldovan brands create an emotional presence through thoughtful digital products.</p></div>
+      </div>
+    </section>
+
+    <section id="movly" class="scene project-scene">
+      <div class="project-stage">
+        <a class="project-frame project-frame--focus project-frame--movly" href="movly.html" aria-label="Open the MOVLY case study" data-reveal><img src="assets/movly-mockup.png" alt="MOVLY mobile product interface displayed on an iPhone" /></a>
+        <p class="project-category" data-reveal><span>Product Design. Full-Stack Development</span></p>
+        <div class="project-info" data-reveal><h2><a class="project-title-link" href="movly.html">MOVLY</a></h2><p>A carefully designed startup prototype that helps people find a team, join nearby games and play together.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="scene bg-paper">
+      <span class="scene-index absolute -right-2 top-28">07</span>
+      <div class="flex min-h-[100svh] flex-col justify-between px-6 pb-8 pt-28 sm:px-10 lg:px-20">
+        <div data-reveal><p class="text-[11px] uppercase tracking-[.2em] text-black/45">Have a project?</p><h2 class="mt-5 max-w-[1100px] font-display text-[clamp(4.6rem,10vw,10rem)] leading-[.8] tracking-[-.05em]">Let’s create<br />something together.</h2><div class="mt-9 flex flex-wrap gap-3"><a href="mailto:djurartiom@icloud.com" class="inline-flex rounded-full bg-ink px-7 py-3.5 text-sm text-white">Let’s talk ↗</a><a href="assets/Artiom_Djur_CV.pdf" download class="inline-flex rounded-full border border-ink px-7 py-3.5 text-sm text-ink">Download CV ↓</a></div></div>
+        <div class="grid gap-x-8 gap-y-6 border-t border-line pt-6 text-sm sm:grid-cols-2 lg:grid-cols-3" data-reveal><div><p class="text-black/40">Email</p><a class="mt-2 block" href="mailto:djurartiom@icloud.com">djurartiom@icloud.com</a></div><div><p class="text-black/40">Telegram</p><a class="mt-2 block" href="https://t.me/sorneeer" target="_blank" rel="noreferrer">@sorneeer ↗</a></div><div><p class="text-black/40">GitHub</p><a class="mt-2 block" href="https://github.com/sorneeer?tab=repositories" target="_blank" rel="noreferrer">sorneeer ↗</a></div><div><p class="text-black/40">Upwork</p><p class="mt-2">Business Designer</p></div><div><p class="text-black/40">Based in</p><p class="mt-2">Chișinău, Moldova</p></div><div><p class="text-black/40">Available for</p><p class="mt-2">Freelance &amp; full-time</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="motion.js?v=2"></script>
+  <script>
+    const initialHash=location.hash;const stage=document.querySelector('#stage');const sections=[...document.querySelectorAll('.scene')];const dots=[...document.querySelectorAll('.section-dot')];const count=document.querySelector('#currentSection');
+    let scrollFrame;
+    const scrollToSection=(hash,behavior='smooth')=>{const target=document.querySelector(hash);if(!target)return;const destination=target.offsetTop;if(behavior==='auto'||matchMedia('(prefers-reduced-motion: reduce)').matches){cancelAnimationFrame(scrollFrame);stage.style.scrollSnapType='none';stage.style.scrollBehavior='auto';stage.scrollTop=destination;requestAnimationFrame(()=>{stage.style.scrollSnapType='';stage.style.scrollBehavior='';});return;}cancelAnimationFrame(scrollFrame);const start=stage.scrollTop;const distance=destination-start;const started=performance.now();const duration=Math.min(1200,760+Math.abs(distance)*.11);stage.style.scrollSnapType='none';stage.style.scrollBehavior='auto';const tick=now=>{const progress=Math.min(1,(now-started)/duration);const eased=progress<.5?4*progress*progress*progress:1-Math.pow(-2*progress+2,3)/2;stage.scrollTop=start+distance*eased;if(progress<1){scrollFrame=requestAnimationFrame(tick);}else{stage.scrollTop=destination;stage.style.scrollSnapType='';stage.style.scrollBehavior='';}};scrollFrame=requestAnimationFrame(tick);};
+    if(initialHash)requestAnimationFrame(()=>requestAnimationFrame(()=>scrollToSection(initialHash,'auto')));
+    window.addEventListener('hashchange',()=>scrollToSection(location.hash));
+    document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{const hash=link.getAttribute('href');if(!document.querySelector(hash))return;event.preventDefault();history.pushState(null,'',hash);scrollToSection(hash);}));
+    const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const i=sections.indexOf(entry.target);dots.forEach((dot,n)=>dot.classList.toggle('is-active',n===i));count.textContent=String(i+1).padStart(2,'0');history.replaceState(null,'',`#${entry.target.id}`)}})},{root:stage,threshold:.58});sections.forEach(section=>sectionObserver.observe(section));
+  </script>
+</body>
+</html>
